@@ -2258,8 +2258,8 @@ body.light {
   }
 }
 
-/*/* =====================================================
-     STYLES SPÉCIFIQUES — PAGE PRF VAR (Version optimisée)
+/* =====================================================
+     STYLES SPÉCIFIQUES — PAGE PRF VAR
      ===================================================== */
 
   /* === VARIABLES GLOBALES === */
@@ -2356,31 +2356,27 @@ body.light {
 
   /* --- Animation d’apparition fluide --- */
   .prf-var .prf-formations .card {
-    background: linear-gradient(135deg, #ffffff, var(--card-bg));
-    border: 2px solid #d8b8ff;
-    color: #333;
-    box-shadow: 0 0 15px rgba(100, 0, 255, 0.15);
-    border-radius: 20px;
-    padding: 25px;
-    flex: 1 1 280px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+  background: #ced4da;
+  border: 2px solid #d8d8d8;
+  color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 25px;
+  flex: 1 1 280px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
   }
 
   .prf-var .prf-formations .cards.visible .card {
-    opacity: 1;
-    transform: translateY(0);
-  }
+   opacity: 1;
+  transform: translateY(0);
+}
 
-  .prf-var .prf-formations .cards.visible .card:nth-child(1) { transition-delay: 0.2s; }
-  .prf-var .prf-formations .cards.visible .card:nth-child(2) { transition-delay: 0.4s; }
-  .prf-var .prf-formations .cards.visible .card:nth-child(3) { transition-delay: 0.6s; }
-  .prf-var .prf-formations .cards.visible .card:nth-child(4) { transition-delay: 0.8s; }
 
   .prf-var .prf-formations .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(100, 0, 255, 0.25);
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   }
 
   .prf-var .prf-formations .card h3 {
@@ -2388,56 +2384,12 @@ body.light {
     margin-bottom: 1rem;
   }
 
-  .prf-var .btn-info {
-    display: inline-block;
-    color: var(--blue-main);
-    border: 2px solid var(--blue-main);
-    padding: 0.5rem 1rem;
-    border-radius: 1.5rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
+.prf-var .prf-formations .card p {
+  color: #005BBB;
+}
 
-  .prf-var .btn-info:hover {
-    background-color: var(--blue-main);
-    color: var(--white);
-  }
 
-  /* === SECTION CAMPUS === */
-  .prf-var .prf-campus {
-    background-color: var(--light-bg);
-    color: var(--text-dark);
-    text-align: center;
-    padding: 5rem 10%;
-  }
-
-  .prf-var .prf-campus h2 {
-    color: var(--blue-main);
-  }
-
-  .prf-var .prf-campus img {
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 1rem;
-  }
-
-  .prf-var .btn-campus {
-    display: inline-block;
-    margin-top: 1.5rem;
-    background-color: var(--blue-main);
-    color: var(--white);
-    padding: 0.7rem 1.3rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .prf-var .btn-campus:hover {
-    background-color: var(--blue-dark);
-  }
-
-  /* === SECTION NUMÉRIQUE === */
+   /* === SECTION NUMÉRIQUE === */
   body.light .numerique-section {
     color: #222;
   }
@@ -2507,21 +2459,6 @@ body.light {
     filter: grayscale(0%);
   }
 
-  /* === SECTION CONTACT === */
-  .prf-var .contact-section {
-    background-color: var(--white);
-    color: var(--text-dark);
-    padding: 5rem 10%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 3rem;
-  }
-
-  .prf-var .contact-info-col h2 {
-    color: var(--blue-main);
-    margin-bottom: 1rem;
-  }
 
   /* === LISTES === */
   .prf-formations ul {
@@ -2569,3 +2506,30 @@ body.light {
       text-align: center;
     }
   }
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.prf-hero .logo-europe {
+  width: 80%;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
