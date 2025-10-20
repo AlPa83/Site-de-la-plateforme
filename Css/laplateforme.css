@@ -2276,10 +2276,10 @@ body.light {
 
   /* === SECTION HERO === */
   .prf-var .prf-hero {
-    background: linear-gradient(to right, var(--blue-main), var(--blue-dark));
+    background: linear-gradient(to right, var(--blue-main), var(--blue-light));
     color: var(--white);
     text-align: center;
-    padding: 10rem 1rem 6rem;
+    padding: 3rem 1rem 6rem;
   }
 
   .prf-var .prf-hero h1 {
@@ -2307,7 +2307,7 @@ body.light {
   }
 
   .prf-var .btn-glow:hover {
-    background: var(--blue-light);
+    background: var(--blue-main);
     box-shadow: 0 0 25px 5px rgba(0, 123, 255, 0.8);
   }
 
@@ -2334,7 +2334,7 @@ body.light {
   }
 
   .prf-var .prf-formations h2 {
-    font-size: 2.8rem;
+    font-size: 2rem;
     margin-bottom: 45px;
     color: var(--purple-accent);
     font-family: 'Permanent Marker', cursive;
@@ -2533,3 +2533,26 @@ body.light {
   margin-left: auto;
   margin-right: auto;
 }
+
+.text-columns {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.text-columns .column {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px; /* coins arrondis */
+  color: white;
+}
+
+/* Fond différent pour chaque colonne */
+.text-columns .column:nth-child(1) {
+  background-color: #A37FFF; /* violet */
+}
+
+.text-columns .column:nth-child(2) {
+  background-color: #2196F3; /* bleu */
+}
+
