@@ -1228,7 +1228,7 @@ body.light {
 
   /* === SECTION FORMATIONS === */
   .prf-var .prf-formations {
-    padding: 60px 60px 20px;
+    padding: 20px 60px 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -1296,48 +1296,131 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
   color: #005BBB;
 }
 
-   /* === SECTION NUMÉRIQUE === */
+  /* ===========================
+     SECTION NUMÉRIQUE
+  =========================== */
   body.light .numerique-section {
-    color: #222;
-  }
-
-  body.light .numerique-text {
-    background: var(--card-bg);
-    box-shadow: 0 0 20px rgba(80, 0, 200, 0.15);
-    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 40px;
+    background-color: #fff;
+    color: #222;
+    box-sizing: border-box;
   }
 
-  body.light .numerique-photo-info {
-    background: #fafaff;
-    box-shadow: 0 0 20px rgba(120, 0, 255, 0.1);
+  /* Texte */
+  body.light .numerique-text {
+    flex: 2;
+    min-width: 300px;
+    background: #f9f9ff;
     border-radius: 20px;
     padding: 30px;
+    box-shadow: 0 0 20px rgba(80, 0, 200, 0.15);
+    font-family: 'Montserrat', sans-serif;
   }
 
-  body.light .numerique-photo-info h4 {
-    color: var(--purple-accent);
-  }
-
-  .prf-var .numerique-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 2.5rem 5%;
-    background-color: var(--white);
-    color: var(--text-dark);
-    gap: 3rem;
-  }
-
-  .prf-var .numerique-text h3 {
-    color: var(--blue-main);
+  body.light .numerique-text h3 {
+    color: #0077ff;
     margin-bottom: 1rem;
-    text-shadow: 0 0 6px rgba(0, 140, 255, 0.5);
+    text-shadow: 0 0 6px rgba(0, 140, 255, 0.3);
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    font-size: 1.8rem;
   }
 
-  .prf-var .numerique-photo-info img {
+  body.light .numerique-text p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+  }
+
+  /* Bouton */
+  body.light .btn-numerique {
+    display: inline-block;
+    background: linear-gradient(135deg, #8a2be2, #ff33aa);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 40px;
+    font-family: 'Permanent Marker', cursive;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(140, 0, 255, 0.25);
+  }
+
+  body.light .btn-numerique:hover {
+    background: linear-gradient(135deg, #ff33aa, #8a2be2);
+    box-shadow: 0 0 30px rgba(255, 51, 170, 0.5), 0 0 60px rgba(138, 43, 226, 0.4);
+    transform: scale(1.05);
+  }
+
+  /* Image */
+  body.light .numerique-photo-info {
+    flex: 1;
+    min-width: 260px;
+    background: #fafaff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(120, 0, 255, 0.1);
+    text-align: center;
+  }
+
+  body.light .numerique-photo-info img {
     width: 100%;
+    height: auto;
     border-radius: 1rem;
+    box-shadow: 0 0 25px rgba(100, 0, 200, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  body.light .numerique-photo-info img:hover {
+    transform: scale(1.05);
+  }
+
+/* Texte du témoignage sous la photo */
+body.light .numerique-photo-info .temoignage {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background: #ffffff;
+  border-left: 4px solid #8a2be2;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(150, 0, 255, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light .numerique-photo-info .temoignage:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.25);
+}
+
+  /* Responsive */
+  @media screen and (max-width: 900px) {
+    body.light .numerique-section {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    body.light .numerique-text,
+    body.light .numerique-photo-info {
+      width: 90%;
+    }
+
+    body.light .btn-numerique {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   /* === PARTENAIRES & CERTIFICATIONS === */
@@ -1387,7 +1470,7 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     .prf-var .prf-intro,
     .prf-var .numerique-section,
     .prf-var .contact-section {
-      padding: 2.5rem 5%;
+      padding: 30px;
     }
   }
 
