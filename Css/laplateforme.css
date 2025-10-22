@@ -1296,16 +1296,16 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
   color: #005BBB;
 }
 
-  /* ===========================
-     SECTION NUMÉRIQUE
+   /* ===========================
+     SECTION NUMÉRIQUE VAR
   =========================== */
   body.light .numerique-section {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; /* mêmes hauteurs */
+    flex-wrap: nowrap;
     gap: 3rem;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 40px;
     background-color: #fff;
@@ -1313,15 +1313,20 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
   }
 
-  /* Texte */
+  /* ===========================
+     COLONNE TEXTE
+  =========================== */
   body.light .numerique-text {
-    flex: 2;
+    flex: 2; /* plus large que la colonne photo */
     min-width: 300px;
     background: #f9f9ff;
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 0 20px rgba(80, 0, 200, 0.15);
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pousse le bouton vers le bas */
   }
 
   body.light .numerique-text h3 {
@@ -1330,7 +1335,7 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     text-shadow: 0 0 6px rgba(0, 140, 255, 0.3);
     font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   body.light .numerique-text p {
@@ -1353,6 +1358,7 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     letter-spacing: 1px;
     transition: all 0.3s ease;
     box-shadow: 0 0 20px rgba(140, 0, 255, 0.25);
+    align-self: flex-start;
   }
 
   body.light .btn-numerique:hover {
@@ -1361,7 +1367,9 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     transform: scale(1.05);
   }
 
-  /* Image */
+  /* ===========================
+     COLONNE PHOTO + TEXTE
+  =========================== */
   body.light .numerique-photo-info {
     flex: 1;
     min-width: 260px;
@@ -1370,6 +1378,9 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     padding: 30px;
     box-shadow: 0 0 20px rgba(120, 0, 255, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* équilibre l'image et le témoignage */
   }
 
   body.light .numerique-photo-info img {
@@ -1384,28 +1395,30 @@ box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
     transform: scale(1.05);
   }
 
-/* Texte du témoignage sous la photo */
-body.light .numerique-photo-info .temoignage {
-  margin-top: 20px;
-  font-style: italic;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  background: #ffffff;
-  border-left: 4px solid #8a2be2;
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(150, 0, 255, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  /* Texte du témoignage sous la photo */
+  body.light .numerique-photo-info .temoignage {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+    border-left: 4px solid #8a2be2;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(150, 0, 255, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-body.light .numerique-photo-info .temoignage:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 20px rgba(150, 0, 255, 0.25);
-}
+  body.light .numerique-photo-info .temoignage:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(150, 0, 255, 0.25);
+  }
 
-  /* Responsive */
+  /* ===========================
+     RESPONSIVE
+  =========================== */
   @media screen and (max-width: 900px) {
     body.light .numerique-section {
       flex-direction: column;
